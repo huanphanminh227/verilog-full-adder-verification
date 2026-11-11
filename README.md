@@ -42,3 +42,15 @@ vvp sim_adder.vvp
 
 # 3. View waveforms (optional)
 gtkwave dump.vcd
+A,B,CI,S (Sum),CO (Carry Out)
+0,0,0,0,0
+0,0,1,1,0
+0,1,0,1,0
+0,1,1,0,1
+1,0,0,1,0
+1,0,1,0,1
+1,1,0,0,1
+1,1,1,1,1
+
+License
+Distributed under the MIT License.
