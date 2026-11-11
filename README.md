@@ -25,6 +25,19 @@ The testbench (`sim/full_adder_tb.v`) runs an **exhaustive equivalence checking 
 * Dumps signal transitions to `dump.vcd` for visual inspection in GTKWave or ModelSim.
 
 ---
+Truth Table
+A,B,CI,S (Sum),CO (Carry Out)
+0,0,0,0,0
+0,0,1,1,0
+0,1,0,1,0
+0,1,1,0,1
+1,0,0,1,0
+1,0,1,0,1
+1,1,0,0,1
+1,1,1,1,1
+
+License
+Distributed under the MIT License.
 
 ## How to Simulate
 
@@ -42,15 +55,6 @@ vvp sim_adder.vvp
 
 # 3. View waveforms (optional)
 gtkwave dump.vcd
-A,B,CI,S (Sum),CO (Carry Out)
-0,0,0,0,0
-0,0,1,1,0
-0,1,0,1,0
-0,1,1,0,1
-1,0,0,1,0
-1,0,1,0,1
-1,1,0,0,1
-1,1,1,1,1
+#
 
-License
-Distributed under the MIT License.
+
