@@ -40,7 +40,11 @@ The testbench (`sim/full_adder_tb.v`) runs an **exhaustive equivalence checking 
 | 1 | 1 | 1 | 1
 
 
-Project Structure
+---
+
+## Project Structure
+
+```text
 verilog-full-adder-verification/
 ├── src/
 │   ├── full_adder_arch.v   # Structural Gate-level model
