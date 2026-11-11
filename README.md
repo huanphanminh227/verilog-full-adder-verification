@@ -19,42 +19,22 @@ An RTL design and digital verification project implemented in **Verilog HDL**. T
 ## Verification Strategy
 The testbench (`sim/full_adder_tb.v`) runs an **exhaustive equivalence checking loop**:
 * Injects all $2^3 = 8$ truth table combinations (`{CI, A, B}` from `000` to `111`).
-* Compares outputs cycle-by-cycle via the condition:
+* Compares outputs cycle-by-cycle via the assertion condition:
   $$\text{Equal} = (S_{\text{ARCH}} == S_{\text{BEH}}) \land (CO_{\text{ARCH}} == CO_{\text{BEH}})$$
 * Triggers an immediate assertion error if any bit disparity occurs.
 * Dumps signal transitions to `dump.vcd` for visual inspection in GTKWave or ModelSim.
 
 ---
-Truth Table
-A,B,CI,S (Sum),CO (Carry Out)
-0,0,0,0,0
-0,0,1,1,0
-0,1,0,1,0
-0,1,1,0,1
-1,0,0,1,0
-1,0,1,0,1
-1,1,0,0,1
-1,1,1,1,1
 
-License
-Distributed under the MIT License.
+## Truth Table Reference
 
-## How to Simulate
-
-### Prerequisites
-* [Icarus Verilog (`iverilog`)](https://steveicarus.github.io/iverilog/)
-* [GTKWave](http://gtkwave.sourceforge.net/) (optional, for viewing waveforms)
-
-### Run via Terminal
-```bash
-# 1. Compile all design files and testbench
-iverilog -o sim_adder.vvp src/full_adder_arch.v src/full_adder_beh.v sim/full_adder_tb.v
-
-# 2. Execute simulation
-vvp sim_adder.vvp
-
-# 3. View waveforms (optional)
-gtkwave dump.vcd
-#
-
-
+| A | B | CI | S (Sum) | CO (Carry Out) |
+| :-: | :-: | :-: | :-: | :-: |
+| 0 | 0 | 0 | 0 | 0 |
+| 0 | 0 | 1 | 1 | 0 |
+| 0 | 1 | 0 | 1 | 0 |
+| 0 | 1 | 1 | 0 | 1 |
+| 1 | 0 | 0 | 1 | 0 |
+| 1 | 0 | 1 | 0 | 1 |
+| 1 | 1 | 0 | 0 | 1 |
+| 1 | 1 | 1 | 1
