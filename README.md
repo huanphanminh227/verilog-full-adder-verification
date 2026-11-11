@@ -53,6 +53,8 @@ verilog-full-adder-verification/
 │   └── full_adder_tb.v     # Automated self-checking testbench
 ├── LICENSE                 # MIT License
 └── README.md               # Technical documentation
+```
 
-License
+--- 
+###License
 Distributed under the MIT License.
