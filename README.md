@@ -56,5 +56,5 @@ verilog-full-adder-verification/
 ```
 
 --- 
-###License
+## License
 Distributed under the MIT License.
