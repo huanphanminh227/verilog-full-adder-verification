@@ -38,3 +38,17 @@ The testbench (`sim/full_adder_tb.v`) runs an **exhaustive equivalence checking 
 | 1 | 0 | 1 | 0 | 1 |
 | 1 | 1 | 0 | 0 | 1 |
 | 1 | 1 | 1 | 1
+
+
+Project Structure
+verilog-full-adder-verification/
+├── src/
+│   ├── full_adder_arch.v   # Structural Gate-level model
+│   └── full_adder_beh.v    # Behavioral RTL model
+├── sim/
+│   └── full_adder_tb.v     # Automated self-checking testbench
+├── LICENSE                 # MIT License
+└── README.md               # Technical documentation
+
+License
+Distributed under the MIT License.
